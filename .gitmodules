@@ -1,0 +1,3 @@
+[submodule "ansible-archlinux"]
+	path = ansible-archlinux
+	url = https://github.com/rhinocerose/ansible-archlinux
