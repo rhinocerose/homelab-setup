@@ -5,8 +5,8 @@ services:
     image: linuxserver/bookstack
     container_name: bookstack
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=${PUID}
+      - PGID=${PGID}
       - DB_HOST=bookstack_db
       - DB_USER=bookstack
       - DB_PASS=<yourdbpass>
@@ -22,8 +22,8 @@ services:
     image: linuxserver/mariadb
     container_name: bookstack_db
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=${PUID}
+      - PGID=${PGID}
       - MYSQL_ROOT_PASSWORD=<yourdbpass>
       - TZ=Europe/London
       - MYSQL_DATABASE=bookstackapp
@@ -37,8 +37,8 @@ services:
     container_name: plex
     network_mode: host
     environment:
-      - PUID=1000
-      - PGID=1000
+      - PUID=${PUID}
+      - PGID=${PGID}
       - VERSION=docker
       - UMASK_SET=022 #optional
       - PLEX_CLAIM= #optional
@@ -123,19 +123,6 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
-  sync:
-    image: linuxserver/resilio-sync
-    container_name: sync
-    volumes:
-      - /opt/appdata/sync:/config
-      - /mnt/storage:/sync
-    ports:
-      - 27028:8888
-      - 55555:55555
-    environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
-    restart: always
   smokeping:
     image: linuxserver/smokeping
     container_name: smokeping
