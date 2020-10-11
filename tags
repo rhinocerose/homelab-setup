@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/86bdb84c/
+DAS or SAN	README.md	/^## DAS or SAN$/;"	s	chapter:Homelab Setup Notes
+Dell R610	README.md	/^### Dell R610$/;"	S	section:Homelab Setup Notes""Server
+Dell R710	README.md	/^### Dell R710$/;"	S	section:Homelab Setup Notes""Server
+HP ProLiant D370	README.md	/^### HP ProLiant D370$/;"	S	section:Homelab Setup Notes""Server
+Hard Drives	README.md	/^## Hard Drives$/;"	s	chapter:Homelab Setup Notes
+Homelab Setup Notes	README.md	/^# Homelab Setup Notes$/;"	c
+IBM M	README.md	/^### IBM M$/;"	S	section:Homelab Setup Notes""Server
+Install secure arch linux environment	ansible/playbook.yml	/^- name: Install secure arch linux environment$/;"	p
+Server	README.md	/^## Server$/;"	s	chapter:Homelab Setup Notes
+Sources	README.md	/^## Sources$/;"	s	chapter:Homelab Setup Notes
