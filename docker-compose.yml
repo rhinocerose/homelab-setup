@@ -46,7 +46,8 @@ services:
       - /path/to/library:/config
       - /path/to/tvseries:/tv
       - /path/to/movies:/movies
-    restart: unless-stopped  plexpy:
+    restart: unless-stopped  
+  plexpy:
     image: linuxserver/plexpy
     container_name: plexpy
     depends_on:
