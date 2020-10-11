@@ -1,1 +1,1 @@
-Heavily sourced from [here](https://github.com/rhinocerose/ansible-archlinux/blob/master/ansible/playbook.yml)
+Heavily sourced from [here](https://github.com/id101010/ansible-archlinux)
