@@ -3,7 +3,12 @@
 ## Hardware
 ### Server
 
-#### Dell R610
+#### Dell R610 1u
+- 6x2.5" drive bays
+- 144GB RAM
+- *Processor:* Xeon X5660 2.80GHz - $800
+- *Processor:* Xeon X5680 3.33GHz - $900
+
 
 #### Dell R710
 
