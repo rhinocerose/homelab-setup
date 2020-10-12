@@ -18,6 +18,7 @@ services:
     restart: unless-stopped
     depends_on:
       - bookstack_db
+      
   bookstack_db:
     image: linuxserver/mariadb
     container_name: bookstack_db
@@ -32,6 +33,7 @@ services:
     volumes:
       - /path/to/data:/config
     restart: unless-stopped
+    
   plex:
     image: linuxserver/plex
     container_name: plex
@@ -47,6 +49,7 @@ services:
       - /path/to/tvseries:/tv
       - /path/to/movies:/movies
     restart: unless-stopped  
+    
   plexpy:
     image: linuxserver/plexpy
     container_name: plexpy
@@ -63,6 +66,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
+      
   nzbget:
     image: linuxserver/nzbget
     container_name: nzbget
@@ -76,6 +80,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
+      
   sonarr:
     image: linuxserver/sonarr
     container_name: sonarr
@@ -94,6 +99,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
+      
   couchpotato:
     image: linuxserver/couchpotato
     container_name: couchpotato
@@ -111,6 +117,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
+      
   deluge:
     image: linuxserver/deluge
     container_name: deluge
@@ -123,6 +130,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
+      
   smokeping:
     image: linuxserver/smokeping
     container_name: smokeping
@@ -135,6 +143,7 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
     restart: always
+    
   radarr:
     image: linuxserver/radarr
     container_name: radarr
@@ -149,6 +158,7 @@ services:
       - PGID=${PGID}
     restart:
       always
+      
   letsencrypt:
     image: linuxserver/letsencrypt
     container_name: letsencrypt
@@ -166,6 +176,7 @@ services:
       - SUBDOMAINS=one,sub,domain,comma,separated
       - ONLY_SUBDOMAINS=true
       - DHLEVEL=4096
+      
   influxdb:
     image: influxdb:latest
     container_name: influxdb
@@ -176,6 +187,7 @@ services:
       - /opt/appdata/influxdb:/var/lib/influxdb
     restart:
       always
+      
   grafana:
     image: grafana/grafana
     container_name: grafana
