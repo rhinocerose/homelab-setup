@@ -16,9 +16,28 @@ Ansible configuration files are in YAML format. See [here](https://docs.ansible.
 │   │   ├── handlers/
 │   │   │    └── main.yml
 │   │   ├── vars/
-│   │   │    └── main.yml
+│   │   │    └── vault.yml
 │   │   ├── files/
 │   │   │    └── filebeat.yml
+```
+
+## Secrets and `ansible-vault`
+
+Create a new secret using:
+
+``` bash
+ansible-vault create vault.yaml
+```
+
+To automatically encrypt on exiting, use:
+``` bash
+ansible-vault create vault.yaml
+```
+
+To manually encrypt and decrypt, use:
+``` bash
+ansible-vault decrypt vault.yaml
+ansible-vault encrypt vault.yaml
 ```
 
 ## Hosts
