@@ -207,6 +207,34 @@ Replace `apt` with `pacman` for Arch
     mode: 'go-w'
     recurse: yes
 ```
+
+### Delete file or directory
+```yaml
+- name: Delete prometheus tmp folder
+  file:
+    path: '/tmp/prometheus-{{ prometheusVersion }}.linux-armv7'
+    state: absent
+```
+
+```yaml
+- name: Creates directory
+  become: yes
+  become_user: root
+  become_method: sudo
+  file: 
+    path: "/data/prometheus/"
+    state: directory
+    owner: "{{userId}}"
+    group: "{{groupId}}"
+    mode: 0755
+```
+
+### Install downloaded `.deb` files
+```yaml
+- name: 'Install Grafana'
+  apt:
+    deb: '/tmp/grafana_{{ grafanaVersion }}_armhf.deb'
+```
 ## Roles
 
 ## Playbooks
