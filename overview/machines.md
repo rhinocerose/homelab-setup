@@ -7,7 +7,7 @@
 - services
   - native
     - pi-hole
-  -docker
+  - docker
     - grafana
     - watchtower
     - heimdall
@@ -20,5 +20,5 @@
   - native
     - ansible
     - salt
-  -docker
+  - docker
     - _none_
