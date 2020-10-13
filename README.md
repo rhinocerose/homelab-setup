@@ -51,7 +51,9 @@
 - samba
 
 ## Sources
-
+- [ironicbadger/infra](https://github.com/IronicBadger/infra)
+- [ansible-nas](https://davidstephens.uk/2019/01/02/an-update-on-ansible-nas/)
+- [managing docker with ansible](https://schaper.io/2018/06/managing-docker-containers-on-your-home-server-with-ansible/)
 - [monster-muffin](https://blog.monstermuffin.org/building-another-nas/)
 - [monster-muffin2](https://blog.monstermuffin.org/building-compact-quiet-low-powered-esxi-storage-whitebox-hybrid/)
 - [some blog](https://blog.networkprofile.org/full-lab-details-09-2020/)
