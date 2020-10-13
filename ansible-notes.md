@@ -23,7 +23,7 @@ Ansible configuration files are in YAML format. See [here](https://docs.ansible.
 
 ## Secrets and `ansible-vault`
 
-Create a new secret using:
+Create a new secret in `vars/vault` by using:
 
 ``` bash
 ansible-vault create vault.yaml
@@ -103,3 +103,40 @@ Incrementing by 2:
     hosts:
       www[01:50:2].example.com:
 ```
+
+## Tasks
+
+## Roles
+
+## Playbooks
+
+```yaml
+---
+- name: update web servers
+  hosts: webservers
+  remote_user: root
+
+  tasks:
+  - name: ensure apache is at the latest version
+    yum:
+      name: httpd
+      state: latest
+  - name: write the apache config file
+    template:
+      src: /srv/httpd.j2
+      dest: /etc/httpd.conf
+
+- name: update db servers
+  hosts: databases
+  remote_user: root
+
+  tasks:
+  - name: ensure postgresql is at the latest version
+    yum:
+      name: postgresql
+      state: latest
+  - name: ensure that postgresql is started
+    service:
+      name: postgresql
+      state: started
+      ```
