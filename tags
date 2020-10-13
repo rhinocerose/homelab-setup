@@ -7,13 +7,29 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/86bdb84c/
-DAS or SAN	README.md	/^## DAS or SAN$/;"	s	chapter:Homelab Setup Notes
-Dell R610	README.md	/^### Dell R610$/;"	S	section:Homelab Setup Notes""Server
-Dell R710	README.md	/^### Dell R710$/;"	S	section:Homelab Setup Notes""Server
-HP ProLiant D370	README.md	/^### HP ProLiant D370$/;"	S	section:Homelab Setup Notes""Server
-Hard Drives	README.md	/^## Hard Drives$/;"	s	chapter:Homelab Setup Notes
+Ansible method	environment-variables.md	/^## Ansible method$/;"	s	chapter:Environment variables
+Ansible method	environment-variables.md	/^## Ansible method$/;"	s	chapter:`fstab`
+DAS or SAN	README.md	/^### DAS or SAN$/;"	S	section:Homelab Setup Notes""Hardware
+Dell R610 1u	README.md	/^#### Dell R610 1u$/;"	t	subsection:Homelab Setup Notes""Hardware""Server
+Dell R710	README.md	/^#### Dell R710$/;"	t	subsection:Homelab Setup Notes""Hardware""Server
+Environment variables	environment-variables.md	/^# Environment variables$/;"	c
+Filesystem Method	environment-variables.md	/^## Filesystem Method$/;"	s	chapter:Environment variables
+HP ProLiant D370	README.md	/^#### HP ProLiant D370$/;"	t	subsection:Homelab Setup Notes""Hardware""Server
+Hard Drives	README.md	/^### Hard Drives$/;"	S	section:Homelab Setup Notes""Hardware
+Hardware	README.md	/^## Hardware$/;"	s	chapter:Homelab Setup Notes
 Homelab Setup Notes	README.md	/^# Homelab Setup Notes$/;"	c
-IBM M	README.md	/^### IBM M$/;"	S	section:Homelab Setup Notes""Server
-Install secure arch linux environment	ansible/playbook.yml	/^- name: Install secure arch linux environment$/;"	p
-Server	README.md	/^## Server$/;"	s	chapter:Homelab Setup Notes
+IBM M	README.md	/^#### IBM M$/;"	t	subsection:Homelab Setup Notes""Hardware""Server
+Media	README.md	/^#### Media$/;"	t	subsection:Homelab Setup Notes""Segmentation""Virtual Machines
+Media	overview/machines.md	/^## Media$/;"	s	chapter:Virtual Machines
+Monitoring	README.md	/^#### Monitoring$/;"	t	subsection:Homelab Setup Notes""Segmentation""Virtual Machines
+Monitoring	overview/machines.md	/^## Monitoring$/;"	s	chapter:Virtual Machines
+Network	overview/machines.md	/^## Network$/;"	s	chapter:Virtual Machines
+Provision	overview/machines.md	/^## Provision$/;"	s	chapter:Virtual Machines
+Segmentation	README.md	/^## Segmentation$/;"	s	chapter:Homelab Setup Notes
+Server	README.md	/^### Server$/;"	S	section:Homelab Setup Notes""Hardware
 Sources	README.md	/^## Sources$/;"	s	chapter:Homelab Setup Notes
+Storage/Provision	README.md	/^#### Storage\/Provision$/;"	t	subsection:Homelab Setup Notes""Segmentation""Virtual Machines
+Switch	README.md	/^### Switch$/;"	S	section:Homelab Setup Notes""Hardware
+Virtual Machines	README.md	/^### Virtual Machines$/;"	S	section:Homelab Setup Notes""Segmentation
+Virtual Machines	overview/machines.md	/^# Virtual Machines$/;"	c
+`fstab`	environment-variables.md	/^# `fstab`$/;"	c
