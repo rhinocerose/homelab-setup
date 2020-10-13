@@ -106,6 +106,50 @@ Incrementing by 2:
 
 ## Tasks
 
+
+### Using Templates to create files
+
+```yaml
+- name: 'write .zshrc for users'
+  template:
+    src: zshrc.j2
+    dest: '~{{ ansible_user_id }}/.zshrc'
+    backup: yes
+    mode: 'u=rw,go=r'
+```
+
+Directory structure:
+```
+├── roles/
+│   ├── common/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   ├── handlers/
+│   │   │    └── main.yml
+│   │   ├── templates/
+│   │   │    └── zshrc.j2
+```
+
+### Install Packages
+Replace `apt` with `pacman` for Arch
+```yaml
+- name: 'Update and upgrade apt packages'
+  become: yes
+  apt:
+    upgrade: yes
+    update_cache: yes
+    cache_valid_time: 86400
+- name: 'Install packages'
+  become: yes
+  apt:
+    pkg:
+      - python3-pip
+      - git
+      - vim
+      - zsh
+      - tmux
+```
+
 ## Roles
 
 ## Playbooks
@@ -201,5 +245,58 @@ From [Ansible examples Github](https://github.com/ansible/ansible-examples/blob/
 
     - name: Create logrotate entry for ansible-pull.log
       template: src=templates/etc_logrotate.d_ansible-pull.j2 dest=/etc/logrotate.d/ansible-pull owner=root group=root mode=0644
+```
+
+# Pi cluster example
+
+Sourced from [here](https://www.dinofizzotti.com/blog/2020-04-10-raspberry-pi-cluster-part-1-provisioning-with-ansible-and-temperature-monitoring-using-prometheus-and-grafana/)
+
+Inventory file `inventory.yml`
+```yaml
+all:
+  hosts:
+    whitepi:
+      ansible_host: whitepi.local
+    greenpi:
+      ansible_host: greenpi.local
+    redpi:
+      ansible_host: redpi.local
+    bluepi:
+      ansible_host: bluepi.local
+  children:
+    raspberry_pi:
+      hosts:
+        whitepi: {}
+        greenpi: {}
+        redpi: {}
+        bluepi: {}
+    monitoring_server:
+      hosts:
+        whitepi: {}
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    remote_user: pi
+```
+
+Main playbook `up.yml`
+```yaml
+---
+- hosts: raspberry_pi
+  user: pi
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - common
+    - rpi_exporter
+    - node_exporter
+
+- hosts: monitoring_server 
+  user: pi
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - monitoring_server 
 ```
 
