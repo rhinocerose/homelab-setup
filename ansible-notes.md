@@ -106,7 +106,6 @@ Incrementing by 2:
 
 ## Tasks
 
-
 ### Using Templates to create files
 
 ```yaml
@@ -149,7 +148,22 @@ Replace `apt` with `pacman` for Arch
       - zsh
       - tmux
 ```
+### `pip` Packages
 
+```yaml
+- pip:
+    name: glances
+    executable: pip3
+```
+
+### Set shell
+```yaml
+- name: 'set default shell for users'
+  become: yes
+  user:
+    name: pi
+    shell: /bin/zsh
+```
 ## Roles
 
 ## Playbooks
