@@ -156,6 +156,14 @@ This can be used in a task like this:
     deb: '/tmp/grafana_{{ grafanaVersion }}_armhf.deb'
 ```
 
+### Templates that start services
+```yaml
+- name: Copy systemd init file
+  template:
+    src: init.service.j2
+    dest: /etc/systemd/system/prometheus.service
+  notify: systemd_reload
+```
 ### Start Services
 ```yaml
 - name: Start Grafana service
