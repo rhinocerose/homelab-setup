@@ -1,6 +1,26 @@
 # Ansible Overview
 
 Ansible configuration files are in YAML format. See [here](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html) for more info on formatting and syntax.
+
+## Directory Structure
+
+```
+├── roles/
+│   ├── logging/
+│   │   ├── tasks/
+│   │   │   ├── setup.yml
+│   │   │   ├── filebeat.yml
+│   │   │   ├── elasticsearch.yml
+│   │   │   ├── kibana.yml
+│   │   │   └── main.yml
+│   │   ├── handlers/
+│   │   │    └── main.yml
+│   │   ├── vars/
+│   │   │    └── main.yml
+│   │   ├── files/
+│   │   │    └── filebeat.yml
+```
+
 ## Hosts
 
 Hosts can be defined in a host (ha!) of ways. We can define it as an `inventory.yml` file:
