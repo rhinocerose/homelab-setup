@@ -347,6 +347,32 @@ From [Ansible examples Github](https://github.com/ansible/ansible-examples/blob/
       template: src=templates/etc_logrotate.d_ansible-pull.j2 dest=/etc/logrotate.d/ansible-pull owner=root group=root mode=0644
 ```
 
+# `virtualenv` configuration thoughts
+From [here](https://github.com/cchurch/ansible-role-virtualenv)
+```yaml
+- hosts: all
+  roles:
+    - name: cchurch.virtualenv
+      vars:
+        virtualenv_path: ~/env
+        virtualenv_os_packages:
+          apt: [libjpeg-dev]
+          yum: [libjpeg-devel]
+        virtualenv_pre_packages:
+          - name: Django
+            version: 1.11.26
+          - Pillow
+        virtualenv_requirements:
+          - ~/src/requirements.txt
+        virtualenv_post_packages:
+          - name: PIL
+            state: absent
+  handlers:
+    - name: custom virtualenv handler
+      debug:
+        msg: "virtualenv in {{ virtualenv_path }} was updated."
+      listen: virtualenv updated
+```
 # Pi cluster example
 
 Sourced from [here](https://www.dinofizzotti.com/blog/2020-04-10-raspberry-pi-cluster-part-1-provisioning-with-ansible-and-temperature-monitoring-using-prometheus-and-grafana/)
