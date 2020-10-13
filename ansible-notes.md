@@ -116,7 +116,13 @@ Incrementing by 2:
     backup: yes
     mode: 'u=rw,go=r'
 ```
-
+or:
+```yaml
+- name: config file
+  template:
+    src: prometheus.conf.j2
+    dest: /etc/prometheus/prometheus.conf
+```
 Directory structure:
 ```
 ├── roles/
@@ -127,6 +133,7 @@ Directory structure:
 │   │   │    └── main.yml
 │   │   ├── templates/
 │   │   │    └── zshrc.j2
+│   │   │    └── prometheus.conf.j2
 │   │   ├── vars/
 │   │   │    └── main.yml
 │   │   │    └── vault.yml
