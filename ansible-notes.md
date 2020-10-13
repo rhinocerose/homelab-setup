@@ -127,8 +127,39 @@ Directory structure:
 │   │   │    └── main.yml
 │   │   ├── templates/
 │   │   │    └── zshrc.j2
+│   │   ├── vars/
+│   │   │    └── main.yml
+│   │   │    └── vault.yml
+```
+The `vars/main.yml` or `vault.yml` files could look like this:
+```yaml
+---
+serviceName: "prometheus"
+userId: "prometheus"
+groupId: "prometheus"
+exec_command: "/usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.conf --storage.tsdb.path=/data/prometheus --storage.tsdb.retention=2d"
+prometheusVersion: "2.18.1"
+grafanaVersion: "7.0.0"
 ```
 
+This can be used in a task like this:
+```yaml
+- name: 'Install Grafana'
+  apt:
+    deb: '/tmp/grafana_{{ grafanaVersion }}_armhf.deb'
+```
+
+### Start Services
+```yaml
+- name: Start Grafana service
+  become: yes
+  become_user: root
+  become_method: sudo
+  service:
+    name: grafana-server
+    state: started
+    enabled: yes
+```
 ### Install Packages
 Replace `apt` with `pacman` for Arch
 ```yaml
