@@ -38,7 +38,7 @@ all:
 
 ```
 
-If this file is not placed in `etc/...` then it must be run with the `-i {FILEPATH}` flag.
+If this file is not placed in `/etc/ansible/hosts` then it must be run with the `-i {FILEPATH}` flag.
 
 ### Hosts with Address Included
 ```yaml
