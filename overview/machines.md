@@ -6,8 +6,8 @@
     - version 10
 - services
   - native
-    - pfsense
-    - firewall
+    - [ ] pfsense
+    - [ ] firewall
     
 ## Monitoring
 - OS
@@ -15,12 +15,12 @@
     - version 10
 - services
   - native
-    - pi-hole
+    - [ ] pi-hole
   - docker
-    - grafana
-    - watchtower
-    - heimdall
-    - portainer
+    - [ ] grafana
+    - [ ] watchtower
+    - [ ] heimdall
+    - [ ] portainer
     
 ## Provision
 - OS
@@ -28,8 +28,8 @@
     - version 10
 - services
   - native
-    - ansible
-    - salt
+    - [ ] ansible
+    - [ ] salt
   - docker
     - _none_
 
@@ -39,10 +39,11 @@
     - version 10
 - services
   - native
-    - pi-hole
+    - [ ] pi-hole
   - docker
-    - plex
-    - openeats
-    - nextcloud
-    - samba
-    - bookstack
+    - [ ] plex
+    - [ ] openeats
+    - [ ] nextcloud
+    - [ ] samba
+    - [ ] bookstack
+    - [ ] gitea
