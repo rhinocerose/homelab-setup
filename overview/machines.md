@@ -1,5 +1,14 @@
 # Virtual Machines
 
+## Network
+- OS
+  - debian
+    - version 10
+- services
+  - native
+    - pfsense
+    - firewall
+    
 ## Monitoring
 - OS
   - debian
@@ -11,6 +20,7 @@
     - grafana
     - watchtower
     - heimdall
+    - portainer
     
 ## Provision
 - OS
@@ -22,3 +32,17 @@
     - salt
   - docker
     - _none_
+
+## Media
+- OS
+  - debian
+    - version 10
+- services
+  - native
+    - pi-hole
+  - docker
+    - plex
+    - openeats
+    - nextcloud
+    - samba
+    - bookstack
