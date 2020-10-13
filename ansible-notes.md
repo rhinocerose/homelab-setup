@@ -164,6 +164,18 @@ Replace `apt` with `pacman` for Arch
     name: pi
     shell: /bin/zsh
 ```
+
+### Set file permissions
+```yaml
+- name: 'set permissions of oh-my-zsh for users'
+  file:
+    path: '~{{ ansible_user_id }}/.oh-my-zsh'
+    # Prevent the cloned repository from having insecure permissions. Failing to do
+    # so causes compinit() calls to fail with "command not found: compdef" errors
+    # for users with insecure umasks (e.g., "002", allowing group writability).
+    mode: 'go-w'
+    recurse: yes
+```
 ## Roles
 
 ## Playbooks
