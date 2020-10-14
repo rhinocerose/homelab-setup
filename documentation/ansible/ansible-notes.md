@@ -2,6 +2,13 @@
 
 Ansible configuration files are in YAML format. See [here](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html) for more info on formatting and syntax.
 
+## Setting hashed password
+
+Run the following command:
+```bash
+
+```
+
 ## Directory Structure
 
 ```
