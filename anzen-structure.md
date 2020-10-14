@@ -4,6 +4,8 @@
 ├── site.yml
 ├── setup.yml
 ├── playbook.yml
+├── vars/
+│   └── vault.yml
 ├── roles/
 │   ├── provision/
 │   │   ├── tasks/
@@ -11,8 +13,6 @@
 │   │   │   └── main.yml
 │   │   ├── handlers/
 │   │   │   └── main.yml
-│   │   ├── vars/
-│   │   │   └── vault.yml
 │   │   ├── defaults/
 │   │   │   └── main.yml
 │   ├── prerequisites/
@@ -21,8 +21,6 @@
 │   │   │   └── main.yml
 │   │   ├── handlers/
 │   │   │   └── main.yml
-│   │   ├── vars/
-│   │   │   └── vault.yml
 │   │   ├── defaults/
 │   │   │   └── main.yml
 │   │   ├── templates/
