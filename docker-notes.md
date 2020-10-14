@@ -3,6 +3,7 @@
 By default `docker` volumes are stored in `/var/lib/docker/volumes/{container_name}/_data/`
 
 ## Volumes
+From [here](https://brooks.sh/2018/06/03/monitoring-your-home-lab-with-grafana-in-docker/)
 
 We’re going to start by creating two Docker volumes. One for Grafana’s configuration file, and another for its persistent data (like the dashboards and their layouts). Volumes are handy because they counteract the ephemeral nature of containers; when a container is destroyed but brought back up with the same volume, everything is just as you left it.
 ```bash
