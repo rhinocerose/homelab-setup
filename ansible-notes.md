@@ -164,6 +164,27 @@ This can be used in a task like this:
     dest: /etc/systemd/system/prometheus.service
   notify: systemd_reload
 ```
+
+### Mounting filesystem
+```yaml
+- name: mount disks
+  mount:
+    name: "{{ item.name }}"
+    src: "{{ item.src }}"
+    fstype: "{{ item.fs }}"
+    # change to 'mounted' to auto mount
+    state: present
+  with_items:
+    - { name: /mnt/parity1, src: /dev/disk/by-id/ata-WDC_WD60EZRZ-00GZ5B1_WD-WXN1H8449UPL-part1, fs: ext4}
+    - { name: /mnt/parity2, src: /dev/disk/by-id/ata-WDC_WD80EZZX-11CSGA0_VK0U9B3Y-part1, fs: ext4}
+    - { name: /mnt/disk1, src: /dev/disk/by-id/ata-WDC_WD60EZRZ-00GZ5B1_WD-WX11D55PXTV3-part1, fs: ext4}
+    - { name: /mnt/retired.disk2, src: /dev/disk/by-id/ata-Hitachi_HDS5C3030ALA630_MJ1311YNG5SD3A-part1, fs: xfs}
+    - { name: /mnt/disk3, src: /dev/disk/by-id/ata-WDC_WD30EFRX-68AX9N0_WD-WCC1T0632015-part1, fs: xfs}
+    - { name: /mnt/disk4, src: /dev/disk/by-id/ata-TOSHIBA_DT01ACA300_X3544DGKS-part1, fs: xfs}
+    - { name: /mnt/disk5, src: /dev/disk/by-id/ata-WDC_WD30EFRX-68AX9N0_WD-WMC1T0074096-part1, fs: xfs}
+    - { name: /mnt/disk6, src: /dev/disk/by-id/ata-Hitachi_HDS5C3030ALA630_MJ1311YNG7SAZA-part1, fs: xfs}
+```
+
 ### Start Services
 ```yaml
 - name: Start Grafana service
