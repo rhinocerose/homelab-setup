@@ -50,6 +50,7 @@ ansible-vault encrypt vault.yaml
 Keep vaulted variables safely visible
 
 You should encrypt sensitive or secret variables with Ansible Vault. However, encrypting the variable names as well as the variable values makes it hard to find the source of the values. You can keep the names of your variables accessible (by grep, for example) without exposing any secrets by adding a layer of indirection:
+
     1. Create a `group_vars/` subdirectory named after the group.
     2. Inside this subdirectory, create two files named `vars` and `vault`.
     3. In the `vars` file, define all of the variables needed, including any sensitive ones.
