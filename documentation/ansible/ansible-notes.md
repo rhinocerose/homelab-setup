@@ -6,7 +6,7 @@ Ansible configuration files are in YAML format. See [here](https://docs.ansible.
 
 Run the following command:
 ```bash
-
+ansible all -i localhost, -m debug -a "msg={{ 'MY_PASSWORD' | password_hash('sha512', 'MY_SALT') }}"
 ```
 
 ## Directory Structure
