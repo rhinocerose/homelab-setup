@@ -238,7 +238,26 @@ Replace `apt` with `pacman` for Arch
     name: pi
     shell: /bin/zsh
 ```
+### Generate SSH Keys
 
+```yaml
+- name: generate SSH key
+  hosts: 127.0.0.1
+  connection: local
+
+  vars:
+    ssh_key_filename: id_rsa_myproject
+
+  tasks:
+
+    - name: generate SSH key "{{ssh_key_filename}}"
+      openssh_keypair:
+        path: "~/.ssh/{{ssh_key_filename}}"
+        type: rsa
+        size: 4096
+        state: present
+        force: no
+```
 ### Set file permissions
 ```yaml
 - name: 'set permissions of oh-my-zsh for users'
