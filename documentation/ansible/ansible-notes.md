@@ -28,6 +28,29 @@ Run the following command:
 │   │   │    └── filebeat.yml
 ```
 
+## Variables
+
+Order:
+
+  - default
+  - group
+  
+### `group_vars`
+#### Directory Structure
+```
+├── group_vars/
+│   ├── all/
+│   │   ├── vars.yml
+│   │   └── vault.yml
+│   ├── group_name/
+│   │   ├── vars.yml
+│   │   └── vault.yml
+
+```
+
+### `host_vars`
+
+
 ## Secrets and `ansible-vault`
 
 Create a new secret in `vars/vault` by using:
