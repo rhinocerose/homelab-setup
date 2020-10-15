@@ -125,8 +125,7 @@ Incrementing by 2:
       www[01:50:2].example.com:
 ```
 
-## Tasks
-
+## Templates
 ### Using Templates to create files
 
 ```yaml
@@ -144,7 +143,20 @@ or:
     src: prometheus.conf.j2
     dest: /etc/prometheus/prometheus.conf
 ```
-Directory structure:
+### Templates that start services
+```yaml
+- name: Copy systemd init file
+  template:
+    src: init.service.j2
+    dest: /etc/systemd/system/prometheus.service
+  notify: systemd_reload
+```
+
+
+## Tasks
+
+
+## Directory structure:
 ```
 ├── roles/
 │   ├── common/
@@ -177,14 +189,6 @@ This can be used in a task like this:
     deb: '/tmp/grafana_{{ grafanaVersion }}_armhf.deb'
 ```
 
-### Templates that start services
-```yaml
-- name: Copy systemd init file
-  template:
-    src: init.service.j2
-    dest: /etc/systemd/system/prometheus.service
-  notify: systemd_reload
-```
 
 ### Mounting filesystem
 ```yaml
