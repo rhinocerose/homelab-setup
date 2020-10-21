@@ -31,7 +31,7 @@ services:
       - MYSQL_USER=${BOOKSTACK_DATABASE_USERNAME}
       - MYSQL_PASSWORD=${BOOKSTACK_DATABASE_PASSWORD}
     volumes:
-      - ${APPDATA_DIR}/bookstack/database:/config
+      - ${APPDATA_DIR}/mariadb/config:/config
     restart: unless-stopped
 
 networks:
