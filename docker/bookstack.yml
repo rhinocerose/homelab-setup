@@ -7,7 +7,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
-	  - TZ=${TZ}
+      - TZ=${TZ}
       - DB_HOST=bookstack_db
       - DB_USER=${BOOKSTACK_DATABASE_USERNAME}
       - DB_PASS=${BOOKSTACK_DATABASE_PASSWORD}
@@ -25,7 +25,7 @@ services:
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
-	  - TZ=${TZ}
+      - TZ=${TZ}
       - MYSQL_ROOT_PASSWORD=${BOOKSTACK_DATABASE_PASSWORD}
       - MYSQL_DATABASE=${BOOKSTACK_DATABASE}
       - MYSQL_USER=${BOOKSTACK_DATABASE_USERNAME}
