@@ -57,6 +57,6 @@
 - [monster-muffin](https://blog.monstermuffin.org/building-another-nas/)
 - [monster-muffin2](https://blog.monstermuffin.org/building-compact-quiet-low-powered-esxi-storage-whitebox-hybrid/)
 - [some blog](https://blog.networkprofile.org/full-lab-details-09-2020/)
-- [docker-compose server setup](https://blog.linuxserver.io/2017/06/24/the-perfect-media-server-2017/)
+- [docker-compose server setup](https://blog.linuxserver.io/2019/07/16/perfect-media-server-2019/)
 - [ubuntu server with docker-compose](https://docs.organizr.app/books/tutorials/chapter/creating-a-full-media-server-on-ubuntu-with-docker)
 - [ansible homeserver setup hosted on gitea](https://yalis.fr/git/yves/home-server)
