@@ -8,6 +8,10 @@ Run the following command:
 ```bash
 ansible all -i localhost, -m debug -a "msg={{ 'MY_PASSWORD' | password_hash('sha512', 'MY_SALT') }}"
 ```
+or, in Python:
+```python
+python3 -c "from getpass import getpass; from crypt import *; p=getpass();print('\n'+crypt(p, METHOD_SHA512)) if p==getpass('Please repeat: ') else print('\nFailed repeating.')"
+```
 
 ## Directory Structure
 
