@@ -1,54 +1,27 @@
 # Homelab Setup Notes
 
-## Hardware
-### Server
-
-#### Dell R610 1u
-- 6x2.5" drive bays
-- 144GB RAM
-- *Processor:* Xeon X5660 2.80GHz - $800
-- *Processor:* Xeon X5680 3.33GHz - $900
-
-
-#### Dell R710
-
-#### HP ProLiant D370
-
-#### IBM M
-
-### DAS or SAN
-
-### Hard Drives
-
-- HGST SAS 4TB Drives - ~$65ea [eBay](https://www.ebay.ca/sch/i.html?_nkw=hgst+sas+4tb&_sacat=56083&_sop=15)
-- [goharddrive](https://www.goharddrive.com/category-s/35.htm)
-
-### Switch
-
 ## Segmentation
 
 [ideas](https://www.reddit.com/r/homelab/comments/gwc2pu/updates_are_so_much_easier_with_ansible/)
-### Virtual Machines
 
-#### Monitoring
-- grafana
-- watchtower
-- heimdall
+## Install Inspirations
+### Full Install
 
-#### Media
-- streaming
-  - plex
-  - music
-- kms
-  - openeats
-  - bookstack
-- downloading
-  - deluge
-  
-#### Storage/Provision
-- syncthing
-- nextcloud
-- samba
+- [AUI](https://github.com/helmuthdu/aui)
+- [bbaserdem](https://github.com/bbaserdem/Arch)
+- [Earnestly](https://github.com/Earnestly/pkgbuilds/tree/master/system-config)
+- [AWS Hosted Custom Repository](https://disconnected.systems/blog/archlinux-repo-in-aws-bucket/)
+- [Custom arch repository](https://blog.akerl.org/2017/12/28/custom-arch-repo-the-automated-way/)
+
+### Secured Installs
+- [Industrial Strength Arch](https://blog.tjll.net/industrial-strength-arch-linux/)
+- [Bullet-proof Arch Install](https://wiki.archlinux.org/index.php/User:Altercation/Bullet_Proof_Arch_Install)
+
+### Ansible-based
+- [Spark](https://github.com/pigmonkey/spark)
+- [Dharmab](https://github.com/dharmab/ansible-archlinux)
+- [Homelab](https://github.com/clintcolding/HomeLab)
+- [Home Automation Setup](https://github.com/dcramer/hive)
 
 ## Sources
 - [ironicbadger/infra](https://github.com/IronicBadger/infra)
